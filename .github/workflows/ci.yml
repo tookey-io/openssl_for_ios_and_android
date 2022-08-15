@@ -35,12 +35,29 @@ jobs:
   openssl-nghttp2:
     strategy:
       matrix:
-        target: [ios, android]
         component: [openssl, nghttp2]
         include:
-          # iOS Configuration
+          # iOS Configurations
           - target: ios
             arch: arm64
+            sdk: iphoneos
+            api: "8.0"
+            platform: iPhoneOS
+
+          - target: ios
+            arch: armv7
+            sdk: iphoneos
+            api: "8.0"
+            platform: iPhoneOS
+
+          - target: ios
+            arch: arm64e
+            sdk: iphoneos
+            api: "8.0"
+            platform: iPhoneOS
+
+          - target: ios
+            arch: x86_64
             sdk: iphoneos
             api: "8.0"
             platform: iPhoneOS
@@ -56,8 +73,8 @@ jobs:
             abi: armeabi-v7a
             api: 23
 
-          - target: android
-            arch: x86
+          - arch: x86
+            target: android
             abi: x86
             api: 23
 
