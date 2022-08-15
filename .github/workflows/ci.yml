@@ -35,7 +35,16 @@ jobs:
   openssl-nghttp2:
     strategy:
       matrix:
-        task: []
+        task: [
+          ios-arm64,
+          ios-armv7,
+          ios-arm64e,
+          ios-x86_64,
+          android-arm64,
+          android-armeabi,
+          android-x86,
+          android-x86_64
+        ]
         component: [openssl, nghttp2]
         include:
           # iOS Configurations
