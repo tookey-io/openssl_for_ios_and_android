@@ -85,7 +85,7 @@ jobs:
 
           - task: android-armeabi
             target: android
-            arch: armeabi
+            arch: arm
             abi: armeabi-v7a
             api: 23
 
